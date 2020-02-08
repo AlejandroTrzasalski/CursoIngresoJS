@@ -14,5 +14,6 @@ else
 {
     alert("La persona es menor de edad");
  }
+ 
 }
 //FIN DE LA FUNCIÓN

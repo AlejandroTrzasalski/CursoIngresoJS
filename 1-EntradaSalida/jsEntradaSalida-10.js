@@ -10,10 +10,10 @@ function mostrarAumento()
  
 
     
-        importe = parseInt(document.getElementById("importe").value);
+        importe = parseFloat(document.getElementById("importe").value);
     
          descuento = importe * 0.75;
 
-         document.getElementById("resultado").value = descuento;
+         document.getElementById("resultado").value = descuento.toFixed(2);
 	
 }
