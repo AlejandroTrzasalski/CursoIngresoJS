@@ -10,5 +10,132 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+     var CantidadDeLamparas = parseInt(document.getElementById("Cantidad").value);
+     var PrecioDeLamparas = 35;
+     var Marca = document.getElementById("Marca").value;
+     var PrecioConDescuento;
+     var DiferenciaDeIIBB;
+
+    switch(Marca){
+        case "ArgentinaLuz":
+                if(CantidadDeLamparas >=6){
+              PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.5 ;
+               document.getElementById("precioDescuento").value = PrecioConDescuento;
+            }
+
+                else if (CantidadDeLamparas ==5) {
+                PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.4 ;
+               document.getElementById("precioDescuento").value = PrecioConDescuento;
+            }
+
+                else if (CantidadDeLamparas == 4){
+                PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.25 ;
+               document.getElementById("precioDescuento").value = PrecioConDescuento;
+            }
+
+                else if (CantidadDeLamparas ==3){
+                PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.15 ;
+                document.getElementById("precioDescuento").value = PrecioConDescuento;
+            }
+
+            break;
+
+        case "FelipeLamparas":
+                if(CantidadDeLamparas >=6){
+                PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.5 ;
+                 document.getElementById("precioDescuento").value = PrecioConDescuento;
+              }
+
+                else if (CantidadDeLamparas ==5) {
+                  PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.3 ;
+                 document.getElementById("precioDescuento").value = PrecioConDescuento;
+               }
+
+                else if (CantidadDeLamparas == 4){
+                    PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.25 ;
+                   document.getElementById("precioDescuento").value = PrecioConDescuento;
+              }
+
+                else if (CantidadDeLamparas ==3){
+                PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.10 ;
+                document.getElementById("precioDescuento").value = PrecioConDescuento;
+            }
+            break;
+
+        case "JeLuz":
+                if(CantidadDeLamparas >=6){
+                PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.5 ;
+                 document.getElementById("precioDescuento").value = PrecioConDescuento;
+              }
+
+                else if (CantidadDeLamparas ==5) {
+                  PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.3 ;
+                 document.getElementById("precioDescuento").value = PrecioConDescuento;
+              }
+
+                else if (CantidadDeLamparas == 4){
+                PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.20 ;
+               document.getElementById("precioDescuento").value = PrecioConDescuento;
+          }
+
+                else if (CantidadDeLamparas ==3){
+            PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.05 ;
+            document.getElementById("precioDescuento").value = PrecioConDescuento;
+        }
+            break;
+
+        case "HazIluminacion":
+                if(CantidadDeLamparas >=6){
+                PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.5 ;
+                 document.getElementById("precioDescuento").value = PrecioConDescuento;
+              }
+
+                else if (CantidadDeLamparas ==5) {
+                  PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.3 ;
+                 document.getElementById("precioDescuento").value = PrecioConDescuento;
+              }
+
+                else if (CantidadDeLamparas == 4){
+                PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.20 ;
+               document.getElementById("precioDescuento").value = PrecioConDescuento;
+          }
+
+                else if (CantidadDeLamparas ==3){
+            PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.05 ;
+            document.getElementById("precioDescuento").value = PrecioConDescuento;
+        }
+            break;
+
+        case "Osram":
+                if(CantidadDeLamparas >=6){
+                PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.5 ;
+                 document.getElementById("precioDescuento").value = PrecioConDescuento;
+              }
+                else if (CantidadDeLamparas ==5) {
+                  PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.3 ;
+                 document.getElementById("precioDescuento").value = PrecioConDescuento;
+              }
+                else if (CantidadDeLamparas == 4){
+                PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.20 ;
+               document.getElementById("precioDescuento").value = PrecioConDescuento;
+          }
+                else if (CantidadDeLamparas ==3){
+            PrecioConDescuento =  (CantidadDeLamparas * PrecioDeLamparas) * 0.05 ;
+            document.getElementById("precioDescuento").value = PrecioConDescuento;
+        }
+            break;
+        }
+            if(PrecioConDescuento >120){
+                DiferenciaDeIIBB = PrecioConDescuento * 1.1 - PrecioConDescuento  ;
+                alert("IIBB Ud. pago " + DiferenciaDeIIBB.toFixed(2));
+            }
+           
+                
+                
+            
+    
+         
+        
+        
+        
 }
